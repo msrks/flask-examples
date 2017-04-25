@@ -1,21 +1,21 @@
 <html>
+
 <head>
-	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
 	</head>
-	<body>
 
-<h1> Edit Menu Item </h1>
+<body><h1> Edit Menu Item </h1>
 
-<form action="{{ url_for('editMenuItem',restaurant_id = restaurant_id, menu_id=item.id)}}" method = 'post'>
+<form action="#" method = 'post'>
 
-<dl>
-	<dt>Name:</dt>
-		<dd><input type ='text' size='30' name='name' placeholder = '{{item.name }}'></dd>
-	<dt>Description:</dt>
-		<dd><textarea name = 'description' rows='5' cols='40' placeholder = '{{item.description }}'></textarea></dd>
-	<dt>Price:</dt>
-		<dd><input type = 'text' size = '8' name='price' placeholder = '{{item.price}}'></dd>
-	<dt>Course:</dt>
+
+	<p>Name:</p>
+		<input type ='text' size='30' name='name' placeholder = '{{item.name }}'>
+	<p>Description:</p>
+		<input type ='text' size='30' name='description' placeholder = '{{item.description}}'>
+	<p>Price:</p>
+		<input type ='text' size='30' name='price' placeholder = '{{item.price}}'>
+	<p>Course:<p>
 
 	{% if item.course == 'Appetizer' %}
 		<dd><input type ='radio' name='course' value='Appetizer'checked >Appetizer</dd>
@@ -47,14 +47,13 @@
 
 
 
-
-
-</dl>
-
-
 <input type='submit' value='Edit'>
 
-<a href = '{{url_for('restaurantMenu', restaurant_id = restaurant_id)}}'> Cancel </a>
+
+<a href = '#'> Cancel </a>
+
+
 </form>
 </body>
 </html>
+
